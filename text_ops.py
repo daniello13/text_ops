@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+#changes Viktoriya
 print("Введите имя файла: ")
 filename=input() # choosing file
 try:
