@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from math import *
 
-def average(text):jkhbkjhkj
+def average(text):
     mas = text.split()
     Xsr = i = 0
     while i < len(mas):
