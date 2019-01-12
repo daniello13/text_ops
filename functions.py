@@ -23,17 +23,10 @@ def dispersion(mas):
         dis += (len(mas[i])-Xsr)*(len(mas[i])-Xsr)
         i+=1
     dis/= len(mas)
-    dis = sqrt(dis)
     return dis
 
 def deviation(mas):
-	Xsr = average(mas)
-	stdev = i = 0
-	while i<len(mas):
-		stdev += fabs(len(mas[i]) - Xsr) #находим стандартное отклонение
-		i+=1
-	stdev/=len(mas)
-	return stdev
+	return sqrt(dispersion(mas))
 
 def split_text(filename):
 	fdes = open(filename, 'r', encoding='utf-8') # opening file
