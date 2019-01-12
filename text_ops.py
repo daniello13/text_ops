@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from math import *
-from math import *
 
 def average(text):
     mas = text.split()
