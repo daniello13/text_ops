@@ -2,7 +2,7 @@
 from math import *
 from math import *
 
-def average(text):
+def average(text):jkhbkjhkj
     mas = text.split()
     Xsr = i = 0
     while i < len(mas):
