@@ -27,11 +27,7 @@ def dispersion(mas):
     return dis
 
 def deviation(mas):
-	Xsr = i=0 
-	while i < len(mas):
-		Xsr += len(mas[i]) #находим среднее арифметическое длин слов
-		i+=1	
-	Xsr/=len(mas)
+	Xsr = average(mas)
 	stdev = i = 0
 	while i<len(mas):
 		stdev += fabs(len(mas[i]) - Xsr) #находим стандартное отклонение

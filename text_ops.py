@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from functions import *
+
 try:
 	texts = []
 	texts.append(split_text('A_Fashion.txt'))
