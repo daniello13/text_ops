@@ -1,6 +1,13 @@
 # -*- coding: utf-8 -*-
 from math import *
 
+def coefDis(texts):
+    coef=0
+    i=0
+    while i < 5:
+        coef += dispersion(texts[i])
+        i+=1
+
 def average(mas):
     Xsr = i = 0
     while i < len(mas):
@@ -56,15 +63,17 @@ except FileNotFoundError:
 	exit()
 #print(text) # prints all text to console
 namefiles = ["A_Fashion","B_Politics", "C_Science", "D_Sport","E_Incident"]
-print("------------------------------------------------s.k.o.------------------------------------------------")
+print("------------------------------------------------Среднеквадратичное отклонение------------------------------------------------")
 i=0
 while i < 5:
     print(namefiles[i] + ": ")
     print(deviation(texts[i]))
     i+=1
-print("------------------------------------------------dispersion------------------------------------------------")
+print("------------------------------------------------Мера среднеквадратичного отклонения------------------------------------------------")
 i=0
 while i < 5:
     print(namefiles[i] + ": ")
     print(dispersion(texts[i]))
     i+=1
+print("Коэффициент дисперсии")
+coefDis(texts)
