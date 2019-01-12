@@ -44,3 +44,5 @@ def split_text(filename):
 	text = fdes.read() # reading
 	fdes.close()
 	return text.split()
+
+#def sr_ariphmetic()
