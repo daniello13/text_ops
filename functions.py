@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 from math import *
 
+def coefVar():
+
 def coefDis(texts):
     coef=0
     i=0
