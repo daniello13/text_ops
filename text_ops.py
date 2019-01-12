@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 from math import *
 
-def average(text):
-    mas = text.split()
+def average(mas):
     Xsr = i = 0
     while i < len(mas):
         Xsr += len(mas[i]) #находим среднее арифметическое длин слов
@@ -10,18 +9,17 @@ def average(text):
     Xsr/=len(mas)
     return Xsr
 
-def dispersion(text):
-    mas = text.split()
+def dispersion(mas):
     dis = i = 0
-    Xsr = average(text)
+    Xsr = average(mas)
     while i <len(mas):
         dis += (len(mas[i])-Xsr)*(len(mas[i])-Xsr)
         i+=1
     dis/= len(mas)
     dis = sqrt(dis)
     return dis
-def deviation(text):
-	mas = text.split() #разбиваем текст на слова
+
+def deviation(mas):
 	Xsr = i=0 
 	while i < len(mas):
 		Xsr += len(mas[i]) #находим среднее арифметическое длин слов
@@ -33,6 +31,7 @@ def deviation(text):
 		i+=1
 	stdev/=len(mas)
 	return stdev
+
 def split_text(filename):
 	fdes = open(filename, 'r', encoding='utf-8') # opening file
 	text = fdes.read() # reading
@@ -56,7 +55,16 @@ except FileNotFoundError:
 	print("Файл не найден")
 	exit()
 #print(text) # prints all text to console
-print("s.k.o.: ")
-print(deviation(text))
-print("dispersion:")
-print(dispersion(text))
+namefiles = ["A_Fashion","B_Politics", "C_Science", "D_Sport","E_Incident"]
+print("------------------------------------------------s.k.o.------------------------------------------------")
+i=0
+while i < 5:
+    print(namefiles[i] + ": ")
+    print(deviation(texts[i]))
+    i+=1
+print("------------------------------------------------dispersion------------------------------------------------")
+i=0
+while i < 5:
+    print(namefiles[i] + ": ")
+    print(dispersion(texts[i]))
+    i+=1
