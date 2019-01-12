@@ -27,8 +27,6 @@ if case == '7':
 		print(namefiles[i] + ": ")
 		print(dispersion(texts[i]))
 		i+=1
-	print("Коэффициент дисперсии")
-	coefDis(texts)
 elif case == '3':
 	print("------------------------------------------------Среднее арифметическое------------------------------------------------")
 	choise1=input('Выберите текст: \n0 A_Fashion.txt \n1 B_Politics.txt \n2 C_Science.txt \n3 D_Sport.txt \n4 E_Incident.txt \nВаш выбор: ')

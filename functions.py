@@ -1,13 +1,6 @@
 # -*- coding: utf-8 -*-
 from math import *
 
-def coefDis(texts):
-    coef=0
-    i=0
-    while i < 5:
-        coef += dispersion(texts[i])
-        i+=1
-
 def average(mas):
     Xsr = i = 0
     while i < len(mas):
