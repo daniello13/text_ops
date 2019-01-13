@@ -27,4 +27,13 @@ def split_text(filename):
 	fdes.close()
 	return text.split()
 
+def sortByLength(inputStr):
+        return len(inputStr)
+
+def mediana(mas):
+    tmp=mas
+    tmp.sort(key=len)
+    ser = int(len(tmp)/2)
+    return len(tmp[ser])
+
 #def sr_ariphmetic()
