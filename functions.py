@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 from math import *
+import re
+from collections import Counter
 
 def average(mas):
     Xsr = i = 0
@@ -59,4 +61,20 @@ def moda(mas):
     kol_voBukw = get_key(d, max_used)
     return kol_voBukw
 
+def reading_fileToOneString(filename):
+    f = open(filename, 'r', encoding='utf-8')
+    string = f.read()
+    f.close()
+    return string
+
+def podschet_slov(find_it):
+    texts = ''
+    texts+=reading_fileToOneString('A_Fashion.txt')
+    texts+=reading_fileToOneString('B_Politics.txt')
+    texts+=reading_fileToOneString('C_Science.txt')
+    texts+=reading_fileToOneString('D_Sport.txt')
+    texts+=reading_fileToOneString('E_Incident.txt')
+
+    words = re.findall(find_it, texts)
+    return len(words)
 

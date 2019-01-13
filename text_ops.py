@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from functions import *
-
 try:
 	texts = []
 	texts.append(split_text('A_Fashion.txt'))
@@ -39,3 +38,7 @@ elif case == '5':
 	print("------------------------------------------------Мода------------------------------------------------")
 	choise1=input('Выберите текст: \n0 A_Fashion.txt \n1 B_Politics.txt \n2 C_Science.txt \n3 D_Sport.txt \n4 E_Incident.txt \nВаш выбор: ')
 	print("\nМода: %i" % moda(texts[int(choise1)]))
+elif case == '1':
+	print("------------------------------------------------Подсчет слов------------------------------------------------")
+	choise1=input('Введите слово для определения частотности в корпусе: ')
+	print("\nСлово повторяется в корпусе %i раз(а)" % podschet_slov(choise1))
