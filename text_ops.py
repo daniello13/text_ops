@@ -7,6 +7,7 @@ try:
 	texts.append(split_text('C_Science.txt'))
 	texts.append(split_text('D_Sport.txt'))
 	texts.append(split_text('E_Incident.txt'))
+	NUM_OF_WORDS = len(texts[0])+len(texts[1])+len(texts[2])+len(texts[3])+len(texts[4])
 except FileNotFoundError:
 	print("Файл не найден")
 	exit()
@@ -41,4 +42,5 @@ elif case == '5':
 elif case == '1':
 	print("------------------------------------------------Подсчет слов------------------------------------------------")
 	choise1=input('Введите слово для определения частотности в корпусе: ')
-	print("\nСлово повторяется в корпусе %i раз(а)" % podschet_slov(choise1))
+	kol = podschet_slov(choise1)
+	print("\nСлово повторяется в корпусе %i раз(а), что составляет частотность вхождений %.3f%% " % (int(kol), (100*float(kol))/NUM_OF_WORDS))
