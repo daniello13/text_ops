@@ -36,4 +36,27 @@ def mediana(mas):
     ser = int(len(tmp)/2)
     return len(tmp[ser])
 
-#def sr_ariphmetic()
+def get_key(d, value):
+    for k, v in d.items():
+        if v == value:
+            return k
+
+def moda(mas):
+    a=[]
+    for i in mas:
+        a.append(len(i))
+    tmp = frozenset(a)
+    d={}
+    for k in tmp:
+        c=0
+        for i in mas:
+            if len(i)==k:
+                c+=1
+        d[k]=c
+    max_used=0
+    kol_voBukw=0
+    max_used = max(d.values())
+    kol_voBukw = get_key(d, max_used)
+    return kol_voBukw
+
+
