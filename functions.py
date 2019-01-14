@@ -78,3 +78,14 @@ def podschet_slov(find_it):
     words = re.findall(find_it, texts)
     return len(words)
 
+def otnosit_chast(filename, find_it):
+    texts = ''
+    texts+=reading_fileToOneString(filename+'.txt')
+
+    words = re.findall(find_it, texts)
+    return len(words)
+
+def kol_vo_slov(filename):
+    text = split_text(filename)
+    return len(text)
+
