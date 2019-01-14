@@ -23,6 +23,22 @@ def dispersion(mas):
 def deviation(mas):
 	return sqrt(dispersion(mas))
 
+def juilland(slovo, namefiles):
+    freq = [0.0, 0.0, 0.0, 0.0, 0.0]
+    sum = sko = sr_ar = n=0
+    for i in namefiles:
+        freq[n] = otnosit_chast(i, slovo)*100/kol_vo_slov(i+'.txt')
+        sum+=freq[n]
+        n+=1
+    sr_ar= sum/n
+    n=0
+    while n<5:
+        sko+=(freq[n]-sr_ar)*(freq[n]-sr_ar)
+        n+=1
+    sko/=5
+    D = 1 - (sko/sqrt(sum-1))
+    return D
+
 def split_text(filename):
 	fdes = open(filename, 'r', encoding='utf-8') # opening file
 	text = fdes.read() # reading
